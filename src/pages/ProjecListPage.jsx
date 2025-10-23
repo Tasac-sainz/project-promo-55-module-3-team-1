@@ -1,5 +1,6 @@
 import "react";
 import ListComponent from "../components/ListComponent";
+import Header from "../components/Header";
 
 const ProjecListPage = () => {
   const staticProjects = [
@@ -71,7 +72,12 @@ const ProjecListPage = () => {
     },
   ];
 
-  return <ListComponent projects={staticProjects} />;
+  return (
+    <>
+      <Header />
+      <ListComponent projects={staticProjects} />;
+    </>
+  )
 };
 
 export default ProjecListPage;
