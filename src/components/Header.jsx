@@ -1,26 +1,26 @@
 import "react";
 import { Link } from "react-router-dom";
-import Logo from "./assets/logo.png";
-import Adalab from "./assets/adalab.png";
+import Logo from "../../public/logo.png";
+import Adalab from "../../public/logo-adalab.webp";
 import "../styles/header.css";
 
 const Header = () => {
   return (
     <>
-      <div className="Header">
-        <Link to="/">
-          <div>
+      <div className="header">
+        <Link to="/" className="home-link">
+          <div className="header-left">
             <img src={Logo} alt="Logo" />
-            <p>Proyectos molones</p>
+            <p className="home-text">Proyectos molones</p>
           </div>
         </Link>
-        <img src={Adalab} alt="Adalab" />
+        <img src={Adalab} alt="Adalab" className="adalab-logo" />
       </div>
       <div className="header-text">
         <h1>Proyectos Molones</h1>
-        <h2>
+        <p>
           Escaparate en línea para recoger ideas a través de la tecnología
-        </h2>
+        </p>
       </div>
     </>
   );

@@ -1,5 +1,36 @@
-.Header {
+.header {
   display: flex;
   justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header img {
+  width: 123px;
+  height: 46px;
+}
+
+.home-link {
+  text-decoration: none;
+  color: white;
+}
+
+.home-link img {
+  width: 60px;
+  height: 60px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+}
+
+.header-text {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.header-text p {
+  font-size: 12px;
 }
