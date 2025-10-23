@@ -1,0 +1,9 @@
+.header-text {
+  display: none;
+}
+
+.notfound-message {
+  text-align: center;
+  font-size: 30px;
+  margin: 40px;
+}

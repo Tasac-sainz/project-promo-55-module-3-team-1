@@ -1,6 +1,7 @@
 import "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import "../styles/buttons.css";
 
 const Buttons = ({ to, children }) => {
   return (
