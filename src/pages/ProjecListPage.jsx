@@ -1,6 +1,7 @@
 import "react";
 import ListComponent from "../components/ListComponent";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 const ProjecListPage = () => {
   const staticProjects = [
@@ -77,7 +78,7 @@ const ProjecListPage = () => {
       <Header />
       <ListComponent projects={staticProjects} />;
     </>
-  )
+  );
 };
 
 export default ProjecListPage;
