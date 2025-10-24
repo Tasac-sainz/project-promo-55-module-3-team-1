@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import Buttons from "../components/Buttons";
 import defaultProject from "../images/project.jpg";
 import defaultAuthor from "../images/author.png";
-import Buttons from "../components/Buttons"
 import ProjectPreview from "../components/ProjectPreview";
 import "../styles/app.css";
 import "../index.css";
@@ -18,7 +17,6 @@ const HomePage = () => {
     demo: "",
     techs: "",
     description: "",
-    photo: "",
     owner: "",
     jobTitle: "",
     projectImage: defaultProject,
@@ -28,38 +26,13 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <Buttons to="project-list">Ver Proyectos</Buttons>
+      <Buttons to="/project-list">Ver Proyectos</Buttons>
+      <ProjectPreview formData={formData} />
       <Form formData={formData} setFormData={setFormData} />
+      <Buttons to="/your-project/:id">Crea tu proyecto</Buttons>
       <Footer />
     </>
   );
 };
-    const [formData, setFormData] = useState({
-        nameProj: "",
-        slogan: "",
-        repo: "",
-        demo: "",
-        techs: "",
-        description: "",
-        photo: "",
-        owner: "",
-        jobTitle: ""
-    })
-
-
-    return (
-        <>
-        <Header />
-        <Buttons to="project-list">Ver Proyectos</Buttons>
-        <ProjectPreview 
-        formData={formData}/>
-        <Form 
-        formData={formData}
-        setFormData={setFormData}
-        />
-        <Footer />
-        </>
-    )
-}
 
 export default HomePage;

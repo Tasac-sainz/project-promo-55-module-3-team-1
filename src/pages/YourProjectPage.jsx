@@ -1,6 +1,9 @@
 import "react";
 import { useParams, Link } from "react-router-dom";
 import ListItemComponent from "../components/ListItemComponent";
+import defaultAuthor from "../images/author.png";
+import defaultProject from "../images/project.jpg";
+import PropTypes from "prop-types";
 
 const YourProjectPage = () => {
   const { id } = useParams();
@@ -15,9 +18,10 @@ const YourProjectPage = () => {
       techs: "JavaScript, HTML y CSS",
       description:
         "Invite Me es una aplicación web interactiva diseñada para permitir a los usuarios crear, visualizar y gestionar información en tiempo real",
-      photo: "",
+      authorImage: defaultAuthor,
       owner: "Equipo 1 del módulo 3 de la 55 Promoción en Adalab",
       jobTitle: "Developer Full Stack",
+      projectImage: defaultProject,
     },
     {
       id: "2",
@@ -28,9 +32,10 @@ const YourProjectPage = () => {
       techs: "JavaScript, HTML y CSS",
       description:
         "Se trata de una plataforma web para crear firmas que podrán aplicarse en correos electrónicos, documentos, etc. ",
-      photo: "",
+      authorImage: defaultAuthor,
       owner: "Equipo X del módulo 3 de la 55 Promoción en Adalab",
       jobTitle: "Developer Full Stack",
+      projectImage: defaultProject,
     },
     {
       id: "3",
@@ -41,9 +46,10 @@ const YourProjectPage = () => {
       demo: "rhttps://github.com/",
       techs: "HTML y CSS",
       description: "Es la web de una agencia de viajes",
-      photo: "",
+      authorImage: defaultAuthor,
       owner: "AdaTravel",
       jobTitle: "Developer Frontend",
+      projectImage: defaultProject,
     },
     {
       id: "4",
@@ -55,9 +61,9 @@ const YourProjectPage = () => {
       techs: "JavaScript, HTML y CSS",
       description:
         "Se trata de una web cuyo objetivo es crear conciencia y empatía acerca del papel que los animales juegan en nuestra vida, así como ofrecer veterinarios de confianza en la zona Norte de Madrid, cuyo factor común sea el trato amable y respetuoso",
-      photo: "",
+      authorImage: defaultAuthor,
       owner: "Tasac-sainz",
-      jobTitle: "Developer Full Stack",
+      projectImage: defaultProject,
     },
     {
       id: "5",
@@ -68,9 +74,10 @@ const YourProjectPage = () => {
       techs: "React, JavaScript, HTML y CSS",
       description:
         "Con esta web puedes encontrar el listado de personajes de la saga Harry Potter con descripciones precisas de cada uno",
-      photo: "",
+      authorImage: defaultAuthor,
       owner: "Promo 55 Adalab - Módulo 3",
       jobTitle: "Developer Full Stack",
+      projectImage: defaultProject,
     },
   ];
 
@@ -84,6 +91,10 @@ const YourProjectPage = () => {
       <Link to="/">Home</Link>
     </>
   );
+};
+
+YourProjectPage.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default YourProjectPage;

@@ -4,11 +4,14 @@ import github from "../images/github.png";
 import PropTypes from "prop-types";
 
 const ListItemComponent = ({ project }) => {
+  console.log("project:", project);
+
   return (
     <li key={project.id}>
       <div className="list-component-container">
         <div className="owner-data">
-          <img src={project.photo} alt="owner photo" />
+          <img src={project.projectImage} alt="project photo" />
+          <img src={project.authorImage} alt="owner photo" />
           <p>{project.jobTitle}</p>
           <h3>{project.owner} </h3>
         </div>
@@ -34,4 +37,21 @@ const ListItemComponent = ({ project }) => {
     </li>
   );
 };
+
+ListItemComponent.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    nameProj: PropTypes.string.isRequired,
+    slogan: PropTypes.string.isRequired,
+    repo: PropTypes.string.isRequired,
+    demo: PropTypes.string.isRequired,
+    techs: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    authorImage: PropTypes.string.isRequired,
+    owner: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string,
+    projectImage: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 export default ListItemComponent;

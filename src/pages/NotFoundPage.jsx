@@ -13,7 +13,7 @@ const NotFoundPage = () => {
       <Header />
       <div className="not-found">
         <p className="notfound-message">Esta página no existe</p>
-        <Buttons to="project-list">Ver Proyectos</Buttons>
+        <Buttons to="/project-list">Ver Proyectos</Buttons>
       </div>
       <Footer />
     </>
