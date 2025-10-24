@@ -1,6 +1,7 @@
 import "react";
 import browser from "../images/browser.png";
 import github from "../images/github.png";
+import PropTypes from "prop-types";
 
 const ListItemComponent = ({ project }) => {
   return (
