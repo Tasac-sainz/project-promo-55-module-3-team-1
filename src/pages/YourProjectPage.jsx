@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Buttons from "../components/Buttons";
 import defaultProject from "../images/project.jpg";
 import PropTypes from "prop-types";
+import "../styles/yourproject.css";
 
 const YourProjectPage = () => {
   const { id } = useParams();
@@ -90,7 +91,9 @@ const YourProjectPage = () => {
   return (
     <>
       <Header />
-      <ListItemComponent project={yourProject} />
+      <div className="yourproject-container">
+        <ListItemComponent project={yourProject} hiddenclass="" />
+      </div>
       <div className="button-container">
         <Buttons to="/project-list">Ver Proyectos</Buttons>
       </div>

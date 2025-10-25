@@ -2,47 +2,54 @@ import "react";
 import browser from "../images/browser.png";
 import github from "../images/github.png";
 import PropTypes from "prop-types";
-import "../styles/projectlist.css";
 
-const ListItemComponent = ({ project }) => {
+const ListItemComponent = ({ project, hiddenclass }) => {
   console.log("project:", project);
 
   return (
-    <li key={project.id} className="card-project">
-      <div className="list-component-container">
-        <div className="owner-data">
-          <img
-            src={project.authorImage}
-            alt="owner photo"
-            className="owner-photo"
-          />
-          <p className="p-jobtitle">{project.jobTitle}</p>
-          <p className="p-project-owner">{project.owner} </p>
-        </div>
-      </div>
-      <div className="project-data">
-        <p className="project-title">{project.nameProj}</p>
-        <p className="project-slogan">{project.slogan} </p>
-        <p className="project-description">{project.description} </p>
-        <div className="project-techs">
-          <p className="techs-p">{project.techs}</p>
-          <div className="techs-logo">
+    <div className="main-container">
+      <img
+        src={project.projectImage}
+        alt="project photo"
+        className={`image-project ${hiddenclass}`}
+      />
+
+      <li key={project.id} className="card-project">
+        <div className="list-component-container">
+          <div className="owner-data">
             <img
-              className="logo-prj"
-              src={browser}
-              href={project.demo}
-              alt="web site"
+              src={project.authorImage}
+              alt="owner photo"
+              className="owner-photo"
             />
-            <img
-              className="logo-prj"
-              src={github}
-              href={project.repo}
-              alt="repo site"
-            />
+            <p className="p-jobtitle">{project.jobTitle}</p>
+            <p className="p-project-owner">{project.owner} </p>
           </div>
         </div>
-      </div>
-    </li>
+        <div className="project-data">
+          <p className="project-title">{project.nameProj}</p>
+          <p className="project-slogan">{project.slogan} </p>
+          <p className="project-description">{project.description} </p>
+          <div className="project-techs">
+            <p className="techs-p">{project.techs}</p>
+            <div className="techs-logo">
+              <img
+                className="logo-prj"
+                src={browser}
+                href={project.demo}
+                alt="web site"
+              />
+              <img
+                className="logo-prj"
+                src={github}
+                href={project.repo}
+                alt="repo site"
+              />
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
   );
 };
 
