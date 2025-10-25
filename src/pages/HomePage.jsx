@@ -27,7 +27,9 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <Buttons to="/project-list">Ver Proyectos</Buttons>
+      <div className="button-container">
+        <Buttons to="/project-list">Ver Proyectos</Buttons>
+      </div>
       <ProjectPreview formData={formData} />
       <Form formData={formData} setFormData={setFormData} />
       <Footer />

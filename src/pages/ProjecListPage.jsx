@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ListComponent from "../components/ListComponent";
 import Header from "../components/Header";
+import Buttons from "../components/Buttons";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import defaultAuthor from "../images/author.png";
@@ -91,7 +92,11 @@ const ProjecListPage = () => {
   return (
     <>
       <Header />
+      <div className="button-container">
+        <Buttons to="/">Nuevo proyecto</Buttons>
+      </div>
       <ListComponent projects={projects} />
+      <Footer />
     </>
   );
 };

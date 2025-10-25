@@ -2,6 +2,7 @@ import "react";
 import { useNavigate } from "react-router-dom";
 import FormTextInputs from "./FormTextInputs";
 import FormImage from "./FormImage";
+import "../styles/buttons.css";
 
 const Form = ({ formData, setFormData }) => {
   const navigate = useNavigate();
@@ -29,7 +30,11 @@ const Form = ({ formData, setFormData }) => {
     <div className="form__inputs">
       <FormTextInputs formData={formData} setFormData={setFormData} />
       <FormImage formData={formData} setFormData={setFormData} />
-      <button onClick={handleCreateProject}>Crea tu proyecto</button>
+      <div className="button-container">
+        <button className="create-button" onClick={handleCreateProject}>
+          Crea tu proyecto
+        </button>
+      </div>
     </div>
   );
 };
