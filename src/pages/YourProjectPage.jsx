@@ -92,7 +92,9 @@ const YourProjectPage = () => {
     <>
       <Header />
       <ListItemComponent project={yourProject} />
-      <Buttons to="/project-list">Ver Proyectos</Buttons>
+      <div className="button-container">
+        <Buttons to="/project-list">Ver Proyectos</Buttons>
+      </div>
       <Footer />
     </>
   );
