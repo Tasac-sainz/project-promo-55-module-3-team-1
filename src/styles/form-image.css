@@ -1,6 +1,7 @@
 .form__images {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 24px;
   margin: 32px;
 }
@@ -16,10 +17,10 @@ input[type="file"] {
 
 .project-button {
   width: 160px;
-  height: 41.2px;
+  height: 50px;
   flex-grow: 0;
   margin: 33.8px 4.4px 19.2px 4px;
-  padding: 5.7px 23px 20.1px 13px;
+  padding: 6px;
   border-radius: 40px;
   background-image: linear-gradient(to right, #8176af -2%, #c0b7e8 98%);
   text-align: center;
@@ -30,10 +31,10 @@ input[type="file"] {
 
 .author-name {
   width: 160px;
-  height: 41.2px;
+  height: 50px;
   flex-grow: 0;
   margin: 33.8px 4.4px 19.2px 4px;
-  padding: 5.7px 23px 20.1px 13px;
+  padding: 6px;
   border-radius: 40px;
   background-image: linear-gradient(to right, #8176af -2%, #c0b7e8 98%);
   text-align: center;

@@ -1,4 +1,5 @@
 import 'react';
+import "../styles/form-text.css";
 import PropTypes from "prop-types";
 
 const FormTextInputs = ({ setFormData, formData }) => {

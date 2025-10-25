@@ -10,7 +10,7 @@ import "../index.css";
 const NotFoundPage = () => {
   return (
     <>
-      <Header />
+      <Header className="notfound-header"/>
       <div className="not-found">
         <p className="notfound-message">Esta página no existe</p>
         <Buttons to="/project-list">Ver Proyectos</Buttons>

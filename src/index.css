@@ -4,8 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #403a5f;
+}
+
+body {
+  background-color: #302C42;
   color: white;
+  font-family: "Montserrat";
 }
 
 
