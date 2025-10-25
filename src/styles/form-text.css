@@ -30,7 +30,8 @@
     margin-top: 20px;
     margin-bottom: 30px;
 } textarea {
-    max-width: 100%;                
+    max-width: 100%;    
+    padding: 20px;            
     box-sizing: border-box;
     background-color: transparent;
     border: 2px solid white;
@@ -43,7 +44,6 @@
 } textarea::placeholder {
     color: white;
     font-family: "Montserrat";
-    padding: 20px;
 }
 
 
