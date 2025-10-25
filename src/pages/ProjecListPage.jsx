@@ -10,7 +10,8 @@ const ProjecListPage = () => {
 
   useEffect(() => {
     const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
-    setProjects(storedProjects);
+    const allProjects = [...staticProjects, ...storedProjects];
+    setProjects(allProjects);
   }, []);
 
   const staticProjects = [
