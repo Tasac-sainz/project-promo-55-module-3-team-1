@@ -2,6 +2,9 @@ import "react";
 import { useParams, Link } from "react-router-dom";
 import ListItemComponent from "../components/ListItemComponent";
 import defaultAuthor from "../images/author.png";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Buttons from "../components/Buttons";
 import defaultProject from "../images/project.jpg";
 import PropTypes from "prop-types";
 
@@ -87,8 +90,10 @@ const YourProjectPage = () => {
 
   return (
     <>
+      <Header />
       <ListItemComponent project={yourProject} />
-      <Link to="/">Home</Link>
+      <Buttons to="/project-list">Ver Proyectos</Buttons>
+      <Footer />
     </>
   );
 };

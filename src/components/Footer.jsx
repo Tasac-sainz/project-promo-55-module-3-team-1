@@ -1,10 +1,13 @@
 import "react";
+import Adalab from "../../public/logo-adalab.webp";
+import "../styles/footer.css";
 
 const Footer = () => {
-    return (
-        <>
-        </>
-    )
-}
+  return (
+    <div className="footer">
+      <img src={Adalab} alt="logo adalab" className="img-footer" />
+    </div>
+  );
+};
 
 export default Footer;
