@@ -70,6 +70,7 @@ const ProjecListPage = () => {
         "Se trata de una web cuyo objetivo es crear conciencia y empatía acerca del papel que los animales juegan en nuestra vida, así como ofrecer veterinarios de confianza en la zona Norte de Madrid, cuyo factor común sea el trato amable y respetuoso",
       authorImage: defaultAuthor,
       owner: "Tasac-sainz",
+      jobTitle: "Developer Full Stack",
       projectImage: defaultProject,
     },
     {
