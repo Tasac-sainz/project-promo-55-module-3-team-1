@@ -1,4 +1,4 @@
-import "react";
+import { useEffect, useState } from "react";
 import ListComponent from "../components/ListComponent";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
@@ -6,6 +6,13 @@ import defaultAuthor from "../images/author.png";
 import defaultProject from "../images/project.jpg";
 
 const ProjecListPage = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+    setProjects(storedProjects);
+  }, []);
+
   const staticProjects = [
     {
       id: "1",
@@ -82,7 +89,7 @@ const ProjecListPage = () => {
   return (
     <>
       <Header />
-      <ListComponent projects={staticProjects} />;
+      <ListComponent projects={projects} />
     </>
   );
 };

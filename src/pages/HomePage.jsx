@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Form from "../components/Form";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -10,6 +11,7 @@ import "../styles/app.css";
 import "../index.css";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nameProj: "",
     slogan: "",
@@ -23,13 +25,32 @@ const HomePage = () => {
     authorImage: defaultAuthor,
   });
 
+  const getNextId = () => {
+    const lastId = parseInt(localStorage.getItem("lastProjectId")) || 0;
+    const nextId = lastId + 1;
+    localStorage.setItem("lastProjectId", nextId);
+    return nextId;
+  };
+  const handleCreateProject = () => {
+    const newProject = {
+      ...formData,
+      id: getNextId().toString(),
+    };
+
+    const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+    const updatedProjects = [...storedProjects, newProject];
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));
+
+    navigate("/project-list");
+  };
+
   return (
     <>
       <Header />
       <Buttons to="/project-list">Ver Proyectos</Buttons>
       <ProjectPreview formData={formData} />
       <Form formData={formData} setFormData={setFormData} />
-      <Buttons to="/your-project/:id">Crea tu proyecto</Buttons>
+      <button onClick={handleCreateProject}>Crea tu proyecto</button>
       <Footer />
     </>
   );
