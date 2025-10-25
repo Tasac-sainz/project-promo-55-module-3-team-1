@@ -1,10 +1,11 @@
 import "react";
 import ListItemComponent from "./ListItemComponent";
 import { Link } from "react-router-dom";
+import "../styles/projectlist.css";
 
 const ListComponent = ({ projects }) => {
   return (
-    <ul>
+    <ul className="li-container">
       {projects.map((project) => {
         return (
           <Link to={`/your-project/${project.id}`} key={project.id}>
