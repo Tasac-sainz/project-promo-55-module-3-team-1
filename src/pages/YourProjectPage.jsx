@@ -83,10 +83,9 @@ const YourProjectPage = () => {
       projectImage: defaultProject,
     },
   ];
-
-  const yourProject = staticProjects.find(
-    (userProject) => userProject.id === id
-  );
+  const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+  const allProjects = [...staticProjects, ...storedProjects];
+  const yourProject = allProjects.find((userProject) => userProject.id === id);
 
   return (
     <>

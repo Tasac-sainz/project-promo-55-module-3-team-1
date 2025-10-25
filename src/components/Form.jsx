@@ -6,16 +6,10 @@ import "../styles/buttons.css";
 
 const Form = ({ formData, setFormData }) => {
   const navigate = useNavigate();
-  const getNextId = () => {
-    const lastId = parseInt(localStorage.getItem("lastProjectId")) || 0;
-    const nextId = lastId + 1;
-    localStorage.setItem("lastProjectId", nextId);
-    return nextId;
-  };
   const handleCreateProject = () => {
     const newProject = {
       ...formData,
-      id: getNextId().toString(),
+      id: (Math.floor(Math.random() * (100 - 6 + 1)) + 6).toString(),
     };
 
     const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
