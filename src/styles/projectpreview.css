@@ -6,6 +6,7 @@
 }
 
 .project__card-preview {
+    color: black;
     align-content: center;
     display: flex;
     flex-direction: row;
@@ -14,8 +15,8 @@
     padding: 20px;
     height: 300px;
     width: 500px;
-    border: 3px solid white;
     border-radius: 30px;
+    background-color: white;
     margin: 60px;
     align-items: center;
 }
