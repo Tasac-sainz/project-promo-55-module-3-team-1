@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ListComponent from "../components/ListComponent";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import defaultAuthor from "../images/author.png";
 import defaultProject from "../images/project.jpg";
