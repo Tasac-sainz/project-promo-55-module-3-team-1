@@ -46,6 +46,9 @@
     padding: 20px;
 }
 
+.input-error-placeholder::placeholder {
+  color: red;
+}
 
 .project__form,
 .owner__form {

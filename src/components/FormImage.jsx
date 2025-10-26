@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/form-image.css";
 
-const FormImage = ({ setFormData }) => {
+const FormImage = ({ setFormData, errors }) => {
   const handleImageUpload = (ev, type) => {
     const file = ev.target.files[0];
     if (file) {
@@ -21,6 +21,10 @@ const FormImage = ({ setFormData }) => {
           {" "}
           Subir foto del proyecto
         </label>
+        {/* Mensaje de error debajo del input */}
+        {errors.projectImage && (
+          <p style={{ color: "red", marginTop: "5px" }}>{errors.projectImage}</p>
+        )}
         <input
           type="file"
           accept="image/*"
@@ -34,6 +38,10 @@ const FormImage = ({ setFormData }) => {
           {" "}
           Subir foto de la autora
         </label>
+        {/* Mensaje de error debajo del input */}
+        {errors.authorImage && (
+          <p style={{ color: "red", marginTop: "5px" }}>{errors.authorImage}</p>
+        )}
         <input
           type="file"
           accept="image/*"
