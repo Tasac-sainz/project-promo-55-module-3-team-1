@@ -84,4 +84,20 @@ const FormTextInputs = ({ setFormData, formData }) => {
   );
 };
 
+FormTextInputs.propTypes = {
+  formData: PropTypes.shape({
+    nameProj: PropTypes.string.isRequired,
+    slogan: PropTypes.string.isRequired,
+    repo: PropTypes.string.isRequired,
+    demo: PropTypes.string.isRequired,
+    techs: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    authorImage: PropTypes.string,
+    owner: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string,
+    projectImage: PropTypes.string,
+  }).isRequired,
+  setFormData: PropTypes.func.isRequired,
+};
+
 export default FormTextInputs;

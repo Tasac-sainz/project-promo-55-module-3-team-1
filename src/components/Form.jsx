@@ -2,6 +2,7 @@ import "react";
 import { useNavigate } from "react-router-dom";
 import FormTextInputs from "./FormTextInputs";
 import FormImage from "./FormImage";
+import PropTypes from "prop-types";
 import "../styles/buttons.css";
 
 const Form = ({ formData, setFormData }) => {
@@ -31,6 +32,22 @@ const Form = ({ formData, setFormData }) => {
       </div>
     </div>
   );
+};
+
+Form.propTypes = {
+  formData: PropTypes.shape({
+    nameProj: PropTypes.string.isRequired,
+    slogan: PropTypes.string.isRequired,
+    repo: PropTypes.string.isRequired,
+    demo: PropTypes.string.isRequired,
+    techs: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    authorImage: PropTypes.string.isRequired,
+    owner: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string,
+    projectImage: PropTypes.string.isRequired,
+  }).isRequired,
+  setFormData: PropTypes.func.isRequired,
 };
 
 export default Form;

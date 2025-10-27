@@ -45,4 +45,8 @@ const FormImage = ({ setFormData }) => {
   );
 };
 
+FormImage.propTypes = {
+  setFormData: PropTypes.func.isRequired,
+};
+
 export default FormImage;
