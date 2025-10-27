@@ -3,28 +3,26 @@ import browser from "../images/browser.png";
 import github from "../images/github.png";
 import PropTypes from "prop-types";
 
-const ListItemComponent = ({ project, hiddenclass }) => {
+const ListItemComponent = ({ project, hiddenclass, card }) => {
   console.log("project:", project);
 
   return (
-    <div className="main-container">
+    <>
       <img
         src={project.projectImage}
         alt="project photo"
         className={`image-project ${hiddenclass}`}
       />
 
-      <li key={project.id} className="card-project">
-        <div className="list-component-container">
-          <div className="owner-data">
-            <img
-              src={project.authorImage}
-              alt="owner photo"
-              className="owner-photo"
-            />
-            <p className="p-jobtitle">{project.jobTitle}</p>
-            <p className="p-project-owner">{project.owner} </p>
-          </div>
+      <li key={project.id} className={`card-project ${card}`}>
+        <div className="owner-data">
+          <img
+            src={project.authorImage}
+            alt="owner photo"
+            className="owner-photo"
+          />
+          <p className="p-jobtitle">{project.jobTitle}</p>
+          <p className="p-project-owner">{project.owner} </p>
         </div>
         <div className="project-data">
           <p className="project-title">{project.nameProj}</p>
@@ -49,7 +47,7 @@ const ListItemComponent = ({ project, hiddenclass }) => {
           </div>
         </div>
       </li>
-    </div>
+    </>
   );
 };
 

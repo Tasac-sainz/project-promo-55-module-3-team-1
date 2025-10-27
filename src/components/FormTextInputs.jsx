@@ -1,6 +1,6 @@
 import "react";
-import "../styles/form-text.css";
 import PropTypes from "prop-types";
+import "../styles/form-text.css";
 
 const FormTextInputs = ({ setFormData, formData }) => {
   const handleChangeInput = (ev) => {

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import FormTextInputs from "./FormTextInputs";
 import FormImage from "./FormImage";
 import PropTypes from "prop-types";
-import "../styles/buttons.css";
 
 const Form = ({ formData, setFormData }) => {
   const navigate = useNavigate();

@@ -29,8 +29,10 @@ const HomePage = () => {
       <div className="button-container">
         <Buttons to="/project-list">Ver Proyectos</Buttons>
       </div>
-      <ProjectPreview formData={formData} />
-      <Form formData={formData} setFormData={setFormData} />
+      <div className="data-container">
+        <ProjectPreview formData={formData} />
+        <Form formData={formData} setFormData={setFormData} />
+      </div>
       <Footer />
     </>
   );

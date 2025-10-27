@@ -44,19 +44,6 @@ const ProjecListPage = () => {
     },
     {
       id: "3",
-      nameProj: "Ada Travel",
-      slogan:
-        "Turismo, aventura, diversión y descanso... vive tus mejores vacaciones",
-      repo: "https://github.com/",
-      demo: "rhttps://github.com/",
-      techs: "HTML y CSS",
-      description: "Es la web de una agencia de viajes",
-      authorImage: defaultAuthor,
-      owner: "AdaTravel",
-      jobTitle: "Developer Frontend",
-    },
-    {
-      id: "4",
       nameProj: "Somos familia",
       slogan: "Nuestros peluditos también son familia!!",
       repo: "https://github.com/Tasac-sainz/somosfamilia",
@@ -69,7 +56,7 @@ const ProjecListPage = () => {
       jobTitle: "Developer Full Stack",
     },
     {
-      id: "5",
+      id: "4",
       nameProj: "Buscardor de personajes de Harry Potter",
       slogan: "El mundo de Howarts en la palma de tu mano!",
       repo: "https://github.com/",
@@ -89,7 +76,7 @@ const ProjecListPage = () => {
       <div className="button-container">
         <Buttons to="/">Nuevo proyecto</Buttons>
       </div>
-      <ListComponent projects={projects} hiddenclass="hidden" />
+      <ListComponent projects={projects} hiddenclass="hidden" card="card" />
       <Footer />
     </>
   );

@@ -1,10 +1,11 @@
 .footer {
   display: flex;
   justify-content: center;
+  align-self: flex-end;
 }
 
 .img-footer {
   width: 123px;
   height: 46px;
-  margin: 19px 0 20px 0;
+  margin: 10px 0 20px 0;
 }

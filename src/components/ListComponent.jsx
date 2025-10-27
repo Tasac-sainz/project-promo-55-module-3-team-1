@@ -3,9 +3,9 @@ import ListItemComponent from "./ListItemComponent";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const ListComponent = ({ projects, hiddenclass }) => {
+const ListComponent = ({ projects, hiddenclass, card }) => {
   return (
-    <ul className="li-container">
+    <ul className="main-container">
       {projects.map((project) => {
         return (
           <Link
@@ -13,7 +13,11 @@ const ListComponent = ({ projects, hiddenclass }) => {
             key={project.id}
             className="project-link"
           >
-            <ListItemComponent project={project} hiddenclass={hiddenclass} />
+            <ListItemComponent
+              project={project}
+              hiddenclass={hiddenclass}
+              card={card}
+            />
           </Link>
         );
       })}
