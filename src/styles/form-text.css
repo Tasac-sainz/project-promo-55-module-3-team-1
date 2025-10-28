@@ -52,6 +52,10 @@ textarea::placeholder {
   font-family: "Montserrat";
 }
 
+.input-error-placeholder::placeholder {
+  color: red;
+}
+
 .project__form,
 .owner__form {
   display: flex;
