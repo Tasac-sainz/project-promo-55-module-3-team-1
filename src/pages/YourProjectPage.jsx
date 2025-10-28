@@ -1,13 +1,15 @@
 import "react";
 import { useParams, Link } from "react-router-dom";
-import ListItemComponent from "../components/ListItemComponent";
+import ProjectPreview from "../components/ProjectPreview";
 import defaultAuthor from "../images/author.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Buttons from "../components/Buttons";
 import defaultProject from "../images/project.jpg";
 import PropTypes from "prop-types";
+import "../styles/projectpreview.css";
 import "../styles/yourproject.css";
+
 
 const YourProjectPage = () => {
   const { id } = useParams();
@@ -81,7 +83,7 @@ const YourProjectPage = () => {
         <Buttons to="/project-list">Ver Proyectos</Buttons>
       </div>
       <div className="yourproject-container">
-        <ListItemComponent project={yourProject} hiddenclass="" />
+        <ProjectPreview project={yourProject} />
       </div>
       <Footer />
     </>

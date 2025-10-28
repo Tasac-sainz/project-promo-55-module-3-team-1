@@ -9,6 +9,7 @@
   box-sizing: border-box;
   font-family: "Montserrat";
   text-align: center;
+  margin-top: 200px;
 }
 input {
   max-width: 100%;

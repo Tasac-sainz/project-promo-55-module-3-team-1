@@ -3,42 +3,38 @@ import browser from "../images/browser.png";
 import github from "../images/github.png";
 import PropTypes from "prop-types";
 
-const ListItemComponent = ({ project, hiddenclass, card }) => {
+const ListItemComponent = ({ project }) => {
   console.log("project:", project);
 
   return (
-    <>
-      <img
-        src={project.projectImage}
-        alt="project photo"
-        className={`image-project ${hiddenclass}`}
-      />
-
-      <li key={project.id} className={`card-project ${card}`}>
-        <div className="owner-data">
+    <div className="list-item__container">
+      <li key={project.id} className="card-project">
+        <div className="photo-column">
           <img
             src={project.authorImage}
             alt="owner photo"
             className="owner-photo"
           />
-          <p className="p-jobtitle">{project.jobTitle}</p>
-          <p className="p-project-owner">{project.owner} </p>
+          <p className="job-title">{project.jobTitle}</p>
+          <p className="owner-name">{project.owner} </p>
         </div>
-        <div className="project-data">
-          <p className="project-title">{project.nameProj}</p>
-          <p className="project-slogan">{project.slogan} </p>
-          <p className="project-description">{project.description} </p>
-          <div className="project-techs">
-            <p className="techs-p">{project.techs}</p>
-            <div className="techs-logo">
+
+        <div className="input-column">
+          <h3>Personal Project Card</h3>
+          <p className="nameProj">{project.nameProj}</p>
+          <p className="slogan">{project.slogan} </p>
+          <p className="description">{project.description} </p>
+          <div className="techs-icons-container">
+            <p className="techs">{project.techs}</p>
+            <div className="icons">
               <img
-                className="logo-prj"
+                className="repo"
                 src={browser}
                 href={project.demo}
                 alt="web site"
               />
               <img
-                className="logo-prj"
+                className="repo"
                 src={github}
                 href={project.repo}
                 alt="repo site"
@@ -47,7 +43,7 @@ const ListItemComponent = ({ project, hiddenclass, card }) => {
           </div>
         </div>
       </li>
-    </>
+    </div>
   );
 };
 

@@ -6,19 +6,13 @@ import FormImage from "./FormImage";
 // Importo las imgs del proyecto y autora por defecto porque se usarán para validar si el usuario no las ha cambiado:
 import defaultProject from "../images/project.jpg";
 import defaultAuthor from "../images/author.png";
+import PropTypes from "prop-types";
 
 const Form = ({ formData, setFormData }) => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState({}); // Creo un estado para guardar los errores de cada campo
   const [globalError, setGlobalError] = useState(""); // Creo otro estado para el mensaje de error global que se mostrará cuando el usuario pulse en "Crear proyecto"
-  
-  const getNextId = () => {
-    const lastId = parseInt(localStorage.getItem("lastProjectId")) || 0;
-    const nextId = lastId + 1;
-    localStorage.setItem("lastProjectId", nextId);
-    return nextId;
-  };
-  
+    
   // Creo la función para validar el formulario
   const validateForm = () => {
       const newErrors = {}; // Creo un objeto temporal donde se irán guardando los errores que haya
@@ -75,7 +69,9 @@ const Form = ({ formData, setFormData }) => {
       {/* Paso errors a los subcomponentes */}
       <FormTextInputs formData={formData} setFormData={setFormData} errors={errors}/>
       <FormImage formData={formData} setFormData={setFormData} errors={errors}/>
-      <button onClick={handleCreateProject}>Crea tu proyecto</button>
+      <div className="button-container">
+        <button onClick={handleCreateProject}>Crea tu proyecto</button>
+      </div>
       {/* Mensaje global debajo del botón */}
       {globalError && <p style={{ color: "red", marginTop: "10px" }}>{globalError}</p>}
     </div>

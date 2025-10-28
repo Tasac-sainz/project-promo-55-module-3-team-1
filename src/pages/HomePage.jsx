@@ -30,7 +30,7 @@ const HomePage = () => {
         <Buttons to="/project-list">Ver Proyectos</Buttons>
       </div>
       <div className="data-container">
-        <ProjectPreview formData={formData} />
+        <ProjectPreview project={formData} />
         <Form formData={formData} setFormData={setFormData} />
       </div>
       <Footer />

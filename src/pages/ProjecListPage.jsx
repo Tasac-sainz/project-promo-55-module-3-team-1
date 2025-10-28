@@ -4,7 +4,9 @@ import Header from "../components/Header";
 import Buttons from "../components/Buttons";
 import Footer from "../components/Footer";
 import defaultAuthor from "../images/author.png";
-import "../styles/projectlist.css";
+import "../styles/listitemcomponent.css";
+import "../styles/projectpreview.css";
+
 
 const ProjecListPage = () => {
   const [projects, setProjects] = useState([]);

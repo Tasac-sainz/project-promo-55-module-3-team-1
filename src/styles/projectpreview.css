@@ -1,8 +1,8 @@
 .project-preview__container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center; 
+    position: relative;
 }
 
 .project__card-preview {
@@ -13,14 +13,45 @@
     justify-content: space-evenly;
     font-family: sans-serif;
     padding: 20px;
-    height: 300px;
-    width: 500px;
+    height: 270px;
+    width: 450px;
     border-radius: 30px;
     background-color: white;
     margin: 60px;
     align-items: center;
+    position: absolute;
+    bottom: -200px;
+    font-family: "Montserrat";
 }
 
 .icons img {
     height: 25px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.techs-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-photo {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    margin: 20px;
+}
+
+.owner-photo {
+    height: 100px;
+    width: 100px;
+}
+
+.input-column {
+    margin-left: 15px;
 }
