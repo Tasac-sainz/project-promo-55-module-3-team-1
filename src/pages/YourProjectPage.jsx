@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Buttons from "../components/Buttons";
 import defaultProject from "../images/project.jpg";
 import PropTypes from "prop-types";
+import "../styles/yourproject.css";
 
 const YourProjectPage = () => {
   const { id } = useParams();
@@ -42,20 +43,6 @@ const YourProjectPage = () => {
     },
     {
       id: "3",
-      nameProj: "Ada Travel",
-      slogan:
-        "Turismo, aventura, diversión y descanso... vive tus mejores vacaciones",
-      repo: "https://github.com/",
-      demo: "rhttps://github.com/",
-      techs: "HTML y CSS",
-      description: "Es la web de una agencia de viajes",
-      authorImage: defaultAuthor,
-      owner: "AdaTravel",
-      jobTitle: "Developer Frontend",
-      projectImage: defaultProject,
-    },
-    {
-      id: "4",
       nameProj: "Somos familia",
       slogan:
         "Familia es quien está a tu lado, cada día... nuestros peluditos, también son familia",
@@ -69,7 +56,7 @@ const YourProjectPage = () => {
       projectImage: defaultProject,
     },
     {
-      id: "5",
+      id: "4",
       nameProj: "Buscardor de personajes de Harry Potter",
       slogan: "El mundo de Howarts en la palma de tu mano!",
       repo: "https://github.com/",
@@ -83,16 +70,19 @@ const YourProjectPage = () => {
       projectImage: defaultProject,
     },
   ];
-
-  const yourProject = staticProjects.find(
-    (userProject) => userProject.id === id
-  );
+  const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+  const allProjects = [...staticProjects, ...storedProjects];
+  const yourProject = allProjects.find((userProject) => userProject.id === id);
 
   return (
     <>
       <Header />
-      <ListItemComponent project={yourProject} />
-      <Buttons to="/project-list">Ver Proyectos</Buttons>
+      <div className="button-container">
+        <Buttons to="/project-list">Ver Proyectos</Buttons>
+      </div>
+      <div className="yourproject-container">
+        <ListItemComponent project={yourProject} hiddenclass="" />
+      </div>
       <Footer />
     </>
   );

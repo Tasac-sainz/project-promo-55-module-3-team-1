@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import Form from "../components/Form";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -27,9 +26,13 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <Buttons to="/project-list">Ver Proyectos</Buttons>
-      <ProjectPreview formData={formData} />
-      <Form formData={formData} setFormData={setFormData} />
+      <div className="button-container">
+        <Buttons to="/project-list">Ver Proyectos</Buttons>
+      </div>
+      <div className="data-container">
+        <ProjectPreview formData={formData} />
+        <Form formData={formData} setFormData={setFormData} />
+      </div>
       <Footer />
     </>
   );

@@ -43,3 +43,10 @@ input[type="file"] {
   font-size: 15px;
   font-weight: bold;
 }
+
+@media (min-width: 768px) {
+  .project-photo {
+    width: 520.8px;
+    height: 545.7px;
+  }
+}

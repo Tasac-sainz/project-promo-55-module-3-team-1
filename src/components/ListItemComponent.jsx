@@ -3,38 +3,51 @@ import browser from "../images/browser.png";
 import github from "../images/github.png";
 import PropTypes from "prop-types";
 
-const ListItemComponent = ({ project }) => {
+const ListItemComponent = ({ project, hiddenclass, card }) => {
   console.log("project:", project);
 
   return (
-    <li key={project.id}>
-      <div className="list-component-container">
+    <>
+      <img
+        src={project.projectImage}
+        alt="project photo"
+        className={`image-project ${hiddenclass}`}
+      />
+
+      <li key={project.id} className={`card-project ${card}`}>
         <div className="owner-data">
-          <img src={project.projectImage} alt="project photo" />
-          <img src={project.authorImage} alt="owner photo" />
-          <p>{project.jobTitle}</p>
-          <h3>{project.owner} </h3>
+          <img
+            src={project.authorImage}
+            alt="owner photo"
+            className="owner-photo"
+          />
+          <p className="p-jobtitle">{project.jobTitle}</p>
+          <p className="p-project-owner">{project.owner} </p>
         </div>
-      </div>
-      <div className="projetc-data">
-        <h3>{project.nameProj}</h3>
-        <h4>{project.slogan} </h4>
-        <p>{project.description} </p>
-        <p>{project.techs}</p>
-        <img
-          className="logo-prj"
-          src={browser}
-          href={project.demo}
-          alt="web site"
-        />
-        <img
-          className="logo-prj"
-          src={github}
-          href={project.repo}
-          alt="repo site"
-        />
-      </div>
-    </li>
+        <div className="project-data">
+          <p className="project-title">{project.nameProj}</p>
+          <p className="project-slogan">{project.slogan} </p>
+          <p className="project-description">{project.description} </p>
+          <div className="project-techs">
+            <p className="techs-p">{project.techs}</p>
+            <div className="techs-logo">
+              <img
+                className="logo-prj"
+                src={browser}
+                href={project.demo}
+                alt="web site"
+              />
+              <img
+                className="logo-prj"
+                src={github}
+                href={project.repo}
+                alt="repo site"
+              />
+            </div>
+          </div>
+        </div>
+      </li>
+    </>
   );
 };
 

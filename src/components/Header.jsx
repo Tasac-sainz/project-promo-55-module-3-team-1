@@ -1,7 +1,7 @@
 import "react";
 import { Link } from "react-router-dom";
-import Logo from "../../public/logo.png";
-import Adalab from "../../public/logo-adalab.webp";
+import Logo from "../images/logo.png";
+import Adalab from "../images/logo-adalab.webp";
 import "../styles/header.css";
 
 const Header = () => {

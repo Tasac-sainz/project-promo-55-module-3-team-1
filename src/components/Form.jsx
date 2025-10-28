@@ -59,7 +59,7 @@ const Form = ({ formData, setFormData }) => {
 
     const newProject = {
       ...formData,
-      id: getNextId().toString(),
+      id: (Math.floor(Math.random() * (100 - 6 + 1)) + 6).toString(),
     };
 
     const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
@@ -80,6 +80,22 @@ const Form = ({ formData, setFormData }) => {
       {globalError && <p style={{ color: "red", marginTop: "10px" }}>{globalError}</p>}
     </div>
   );
+};
+
+Form.propTypes = {
+  formData: PropTypes.shape({
+    nameProj: PropTypes.string.isRequired,
+    slogan: PropTypes.string.isRequired,
+    repo: PropTypes.string.isRequired,
+    demo: PropTypes.string.isRequired,
+    techs: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    authorImage: PropTypes.string.isRequired,
+    owner: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string,
+    projectImage: PropTypes.string.isRequired,
+  }).isRequired,
+  setFormData: PropTypes.func.isRequired,
 };
 
 export default Form;

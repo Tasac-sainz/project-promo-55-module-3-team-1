@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import ListComponent from "../components/ListComponent";
 import Header from "../components/Header";
+import Buttons from "../components/Buttons";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
 import defaultAuthor from "../images/author.png";
-import defaultProject from "../images/project.jpg";
+import "../styles/projectlist.css";
 
 const ProjecListPage = () => {
   const [projects, setProjects] = useState([]);
@@ -28,7 +28,6 @@ const ProjecListPage = () => {
       authorImage: defaultAuthor,
       owner: "Equipo 1 del módulo 3 de la 55 Promoción en Adalab",
       jobTitle: "Developer Full Stack",
-      projectImage: defaultProject,
     },
     {
       id: "2",
@@ -42,38 +41,22 @@ const ProjecListPage = () => {
       authorImage: defaultAuthor,
       owner: "Equipo X del módulo 3 de la 55 Promoción en Adalab",
       jobTitle: "Developer Full Stack",
-      projectImage: defaultProject,
     },
     {
       id: "3",
-      nameProj: "Ada Travel",
-      slogan:
-        "Turismo, aventura, diversión y descanso... vive tus mejores vacaciones",
-      repo: "https://github.com/",
-      demo: "rhttps://github.com/",
-      techs: "HTML y CSS",
-      description: "Es la web de una agencia de viajes",
-      authorImage: defaultAuthor,
-      owner: "AdaTravel",
-      jobTitle: "Developer Frontend",
-      projectImage: defaultProject,
-    },
-    {
-      id: "4",
       nameProj: "Somos familia",
-      slogan:
-        "Familia es quien está a tu lado, cada día... nuestros peluditos, también son familia",
+      slogan: "Nuestros peluditos también son familia!!",
       repo: "https://github.com/Tasac-sainz/somosfamilia",
       demo: "https://tasac-sainz.github.io/somosfamilia/",
       techs: "JavaScript, HTML y CSS",
       description:
-        "Se trata de una web cuyo objetivo es crear conciencia y empatía acerca del papel que los animales juegan en nuestra vida, así como ofrecer veterinarios de confianza en la zona Norte de Madrid, cuyo factor común sea el trato amable y respetuoso",
+        "Se trata de una web cuyo objetivo es crear conciencia y empatía acerca del papel que los animales juegan en nuestra vida, así como ofrecer veterinarios cuyo factor común sea el trato amable y respetuoso",
       authorImage: defaultAuthor,
       owner: "Tasac-sainz",
-      projectImage: defaultProject,
+      jobTitle: "Developer Full Stack",
     },
     {
-      id: "5",
+      id: "4",
       nameProj: "Buscardor de personajes de Harry Potter",
       slogan: "El mundo de Howarts en la palma de tu mano!",
       repo: "https://github.com/",
@@ -84,14 +67,17 @@ const ProjecListPage = () => {
       authorImage: defaultAuthor,
       owner: "Promo 55 Adalab - Módulo 3",
       jobTitle: "Developer Full Stack",
-      projectImage: defaultProject,
     },
   ];
 
   return (
     <>
       <Header />
-      <ListComponent projects={projects} />
+      <div className="button-container">
+        <Buttons to="/">Nuevo proyecto</Buttons>
+      </div>
+      <ListComponent projects={projects} hiddenclass="hidden" card="card" />
+      <Footer />
     </>
   );
 };

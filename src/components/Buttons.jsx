@@ -19,8 +19,3 @@ Buttons.propTypes = {
 };
 
 export default Buttons;
-
-// Cómo lo voy a usar
-// <Buttons to="project-list">Ver Proyectos</Buttons>
-// <Buttons to="/">Nuevo proyecto</Buttons>
-// <Buttons to="your-project">Crea tu proyecto</Buttons>
