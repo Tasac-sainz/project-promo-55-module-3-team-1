@@ -13,7 +13,8 @@
     justify-content: space-evenly;
     font-family: sans-serif;
     padding: 20px;
-    height: 270px;
+    min-height: 270px;
+    max-height: 300px;
     width: 450px;
     border-radius: 30px;
     background-color: white;
@@ -21,23 +22,27 @@
     align-items: center;
     position: absolute;
     bottom: -200px;
-    font-family: "Montserrat";
+    font-family: "Poppins";
+    overflow: hidden;
 }
 
 .icons img {
     height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px #bcd1d8;
 }
 
 .icons {
     display: flex;
     flex-direction: row;
-    gap: 6px;
+    gap: 10px;
 }
 
 .techs-icons-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: auto;
 }
 
 .project-photo {
@@ -48,10 +53,87 @@
 }
 
 .owner-photo {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.owner-name {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .input-column {
+    flex: 1;
     margin-left: 15px;
+}
+
+.photo-column {
+    width: 150px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.job-title {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #909090;
+}
+
+.nameProj {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.slogan {
+    color: #575757;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.description {
+    color: #3e3e3ee1;
+    font-size: 13px;
+    margin-top: 10px;
+    overflow: hidden;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;      
+    -webkit-box-orient: vertical;
+}
+
+.techs {
+    margin-right: 30px;
+    font-size: 14px;
+    color: #505050;
+}
+
+.input-column h3 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.title-line__container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 3px; 
+}
+.line-1 {
+    background: linear-gradient(to left, black, white);
+    height: 3px;
+    width: 35px;
+}
+.line-2 {
+    background: linear-gradient(to right, black, white);
+    height: 3px;
+    width: 35px;
 }

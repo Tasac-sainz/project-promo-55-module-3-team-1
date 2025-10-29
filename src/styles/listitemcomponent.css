@@ -6,19 +6,21 @@
 
 .card-project {
     color: black;
-    align-content: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     font-family: sans-serif;
     padding: 20px;
-    height: 270px;
+    min-height: 270px;
+    max-height: 300px;
     width: 450px;
     border-radius: 30px;
     background-color: white;
     margin: 15px;
     align-items: center;
-    font-family: "Montserrat";
+    font-family: "Poppins";
+    overflow: hidden;
 }
 
 a {

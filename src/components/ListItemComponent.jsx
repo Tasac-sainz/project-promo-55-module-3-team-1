@@ -20,26 +20,22 @@ const ListItemComponent = ({ project }) => {
         </div>
 
         <div className="input-column">
-          <h3>Personal Project Card</h3>
+          <div className="title-line__container">
+            <div class="line-1"></div><h3>Personal Project Card</h3><div class="line-2"></div>
+          </div>
           <p className="nameProj">{project.nameProj}</p>
           <p className="slogan">{project.slogan} </p>
           <p className="description">{project.description} </p>
           <div className="techs-icons-container">
             <p className="techs">{project.techs}</p>
             <div className="icons">
-              <img
-                className="repo"
-                src={browser}
-                href={project.demo}
-                alt="web site"
-              />
-              <img
-                className="repo"
-                src={github}
-                href={project.repo}
-                alt="repo site"
-              />
-            </div>
+            <a className="repo" href={project.demo}>
+              <img src={browser} alt="web site"/>
+            </a>
+            <a className="repo" href={project.repo}>
+              <img src={github} alt="repo site"/>
+            </a>
+          </div>
           </div>
         </div>
       </li>

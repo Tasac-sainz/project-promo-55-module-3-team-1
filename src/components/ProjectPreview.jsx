@@ -26,7 +26,9 @@ const ProjectPreview = ({ project }) => {
         </div>
 
         <div className="input-column">
-          <h3>Personal Project Card</h3>
+          <div className="title-line__container">
+            <div class="line-1"></div><h3>Personal Project Card</h3><div class="line-2"></div>
+          </div>
           <p className="nameProj">{project.nameProj || "Elegant Workspace"}</p>
           <p className="slogan">{project.slogan || "Diseños Exclusivos"}</p>
           <p className="description">
