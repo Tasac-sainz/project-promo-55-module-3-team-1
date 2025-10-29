@@ -4,7 +4,7 @@ import { useState } from "react";
 import FormTextInputs from "./FormTextInputs";
 import FormImage from "./FormImage";
 import Reset from "../components/Reset";
-import localStorage from "../services/localStorage";
+import ls from "../services/localStorage";
 import defaultProject from "../images/project.jpg";
 import defaultAuthor from "../images/author.png";
 import PropTypes from "prop-types";
@@ -36,6 +36,7 @@ const Form = ({ formData, setFormData }) => {
       newErrors.authorImage = "Sube una imagen de la autora";
 
     setErrors(newErrors);
+    console.log(errors);
 
     if (Object.keys(newErrors).length > 0) {
       setGlobalError("Por favor, completa los campos");
@@ -55,9 +56,9 @@ const Form = ({ formData, setFormData }) => {
       id: (Math.floor(Math.random() * (100 - 6 + 1)) + 6).toString(),
     };
 
-    const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+    const storedProjects = ls.get("projects", []);
     const updatedProjects = [...storedProjects, newProject];
-    localStorage.setItem("projects", JSON.stringify(updatedProjects));
+    ls.set("projects", updatedProjects);
 
     navigate("/project-list");
   };
