@@ -6,11 +6,14 @@ const FormImage = ({ setFormData, errors }) => {
   const handleImageUpload = (ev, type) => {
     const file = ev.target.files[0];
     if (file) {
-      const imageURL = URL.createObjectURL(file);
-      setFormData((prev) => ({
-        ...prev,
-        [type]: imageURL,
-      }));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData((prev) => ({
+          ...prev,
+          [type]: reader.result,
+        }));
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -23,7 +26,9 @@ const FormImage = ({ setFormData, errors }) => {
         </label>
         {/* Mensaje de error debajo del input */}
         {errors.projectImage && (
-          <p style={{ color: "red", marginTop: "5px" }}>{errors.projectImage}</p>
+          <p style={{ color: "red", marginTop: "5px" }}>
+            {errors.projectImage}
+          </p>
         )}
         <input
           type="file"
@@ -55,6 +60,10 @@ const FormImage = ({ setFormData, errors }) => {
 
 FormImage.propTypes = {
   setFormData: PropTypes.func.isRequired,
+  errors: PropTypes.shape({
+    projectImage: PropTypes.string,
+    authorImage: PropTypes.string,
+  }).isRequired,
 };
 
 export default FormImage;

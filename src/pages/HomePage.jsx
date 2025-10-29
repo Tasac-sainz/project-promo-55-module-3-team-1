@@ -6,7 +6,6 @@ import Buttons from "../components/Buttons";
 import defaultProject from "../images/project.jpg";
 import defaultAuthor from "../images/author.png";
 import ProjectPreview from "../components/ProjectPreview";
-import Reset from "../components/Reset";
 import "../styles/app.css";
 import "../index.css";
 
@@ -34,7 +33,6 @@ const HomePage = () => {
         <ProjectPreview project={formData} />
         <Form formData={formData} setFormData={setFormData} />
       </div>
-      <Reset setFormData={setFormData} />
       <Footer />
     </>
   );

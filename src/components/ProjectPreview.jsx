@@ -2,6 +2,7 @@ import "react";
 import "../styles/projectpreview.css";
 import browserIcon from "../images/browser.png";
 import githubIcon from "../images/github.png";
+import PropTypes from "prop-types";
 
 const ProjectPreview = ({ project }) => {
   return (
@@ -49,8 +50,19 @@ const ProjectPreview = ({ project }) => {
   );
 };
 
-export default ProjectPreview;
+ProjectPreview.propTypes = {
+  project: PropTypes.shape({
+    projectImage: PropTypes.string,
+    authorImage: PropTypes.string,
+    jobTitle: PropTypes.string,
+    owner: PropTypes.string,
+    nameProj: PropTypes.string,
+    slogan: PropTypes.string,
+    description: PropTypes.string,
+    techs: PropTypes.string,
+    repo: PropTypes.string,
+    demo: PropTypes.string,
+  }).isRequired,
+};
 
-// TODO: AÑADIR
-// <img src={formData.projectImage} alt=“Imagen del proyecto” />
-// <img src={formData.authorImage} alt=“Imagen de la autora” />
+export default ProjectPreview;

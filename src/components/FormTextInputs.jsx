@@ -20,7 +20,9 @@ const FormTextInputs = ({ setFormData, formData, errors }) => {
         <input
           name="nameProj"
           id="project-name"
-          placeholder={errors.nameProj ? errors.nameProj : "Nombre del proyecto"}
+          placeholder={
+            errors.nameProj ? errors.nameProj : "Nombre del proyecto"
+          }
           value={formData.nameProj}
           onChange={handleChangeInput}
           className={errors.nameProj ? "input-error-placeholder" : ""}
@@ -106,6 +108,16 @@ FormTextInputs.propTypes = {
     projectImage: PropTypes.string,
   }).isRequired,
   setFormData: PropTypes.func.isRequired,
+  errors: PropTypes.shape({
+    nameProj: PropTypes.string,
+    slogan: PropTypes.string,
+    repo: PropTypes.string,
+    demo: PropTypes.string,
+    techs: PropTypes.string,
+    description: PropTypes.string,
+    owner: PropTypes.string,
+    jobTitle: PropTypes.string,
+  }).isRequired,
 };
 
 export default FormTextInputs;
