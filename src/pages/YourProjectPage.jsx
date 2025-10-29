@@ -10,7 +10,6 @@ import PropTypes from "prop-types";
 import "../styles/projectpreview.css";
 import "../styles/yourproject.css";
 
-
 const YourProjectPage = () => {
   const { id } = useParams();
 
@@ -19,8 +18,8 @@ const YourProjectPage = () => {
       id: "1",
       nameProj: "Invite Me",
       slogan: "Diseña invitaciones únicas y creativas para tus eventos",
-      repo: "https://github.com/Rosana-Moya/project-promo55-modulo-2-team-1",
-      demo: "https://rosana-moya.github.io/project-promo55-modulo-2-team-1/index.html",
+      demo: "https://github.com/Rosana-Moya/project-promo55-modulo-2-team-1",
+      repo: "https://rosana-moya.github.io/project-promo55-modulo-2-team-1/index.html",
       techs: "JS-HTML-CSS",
       description:
         "Aplicación web interactiva diseñada para permitir a los usuarios crear, visualizar y gestionar información en tiempo real.",
@@ -33,8 +32,8 @@ const YourProjectPage = () => {
       id: "2",
       nameProj: "Generador de firma",
       slogan: "Crea una vez tu firma y aplícala dónde tú quieras",
-      repo: "https://github.com/",
       demo: "https://github.com/",
+      repo: "https://github.com/",
       techs: "JS-HTML-CSS",
       description:
         "Plataforma web para crear firmas que podrán aplicarse en correos electrónicos, documentos, etc.",
@@ -46,10 +45,9 @@ const YourProjectPage = () => {
     {
       id: "3",
       nameProj: "Somos familia",
-      slogan:
-        "Nuestros peluditos también son familia",
-      repo: "https://github.com/Tasac-sainz/somosfamilia",
-      demo: "https://tasac-sainz.github.io/somosfamilia/",
+      slogan: "Nuestros peluditos también son familia",
+      demo: "https://github.com/Tasac-sainz/somosfamilia",
+      repo: "https://tasac-sainz.github.io/somosfamilia/",
       techs: "JS-HTML-CSS",
       description:
         "Web cuyo objetivo es crear conciencia y empatía acerca del papel que los animales juegan en nuestra vida.",
@@ -61,8 +59,8 @@ const YourProjectPage = () => {
       id: "4",
       nameProj: "Buscador de personajes",
       slogan: "¡El mundo de Hogwarts en la palma de tu mano!",
-      repo: "https://github.com/",
       demo: "https://github.com/",
+      repo: "https://github.com/",
       techs: "React-JS-HTML-CSS",
       description:
         "Con esta web puedes encontrar el listado de personajes de la saga Harry Potter con descripciones precisas de cada uno.",
