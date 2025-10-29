@@ -137,3 +137,10 @@
     height: 3px;
     width: 35px;
 }
+
+@media (min-width: 768px){
+    .project__card-preview {
+        bottom: 0;
+        top: 400px;
+    }
+}

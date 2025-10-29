@@ -4,7 +4,6 @@ import HomePage from "./HomePage";
 import YourProjectPage from "./YourProjectPage";
 import ProjectListPage from "./ProjecListPage";
 import NotFoundPage from "./NotFoundPage";
-import "../styles/app.css";
 
 const App = () => {
   return (

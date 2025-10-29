@@ -34,22 +34,24 @@ const FormTextInputs = ({ setFormData, formData, errors }) => {
           onChange={handleChangeInput}
           className={errors.nameProj ? "input-error-placeholder" : ""}
         />
-        <input
-          name="repo"
-          id="repo"
-          placeholder={errors.repo ? errors.repo : "Repositorio"}
-          value={formData.repo}
-          onChange={handleChangeInput}
-          className={errors.nameProj ? "input-error-placeholder" : ""}
-        />
-        <input
-          name="demo"
-          id="demo"
-          placeholder={errors.demo ? errors.demo : "Demo"}
-          value={formData.demo}
-          onChange={handleChangeInput}
-          className={errors.nameProj ? "input-error-placeholder" : ""}
-        />
+        <div className="repo-demo">
+            <input
+            name="repo"
+            id="repo"
+            placeholder={errors.repo ? errors.repo : "Repositorio"}
+            value={formData.repo}
+            onChange={handleChangeInput}
+            className={`repo ${errors.nameProj ? "input-error-placeholder" : ""}`}
+          />
+          <input
+            name="demo"
+            id="demo"
+            placeholder={errors.demo ? errors.demo : "Demo"}
+            value={formData.demo}
+            onChange={handleChangeInput}
+            className={`demo ${errors.nameProj ? "input-error-placeholder" : ""}`}
+          />
+        </div>
         <input
           name="techs"
           id="techs"

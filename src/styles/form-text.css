@@ -64,6 +64,16 @@ textarea::placeholder {
   margin-bottom: 30px;
 }
 
+.repo-demo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.repo, .demo {
+  width: 50%;
+}
+
 @media (min-width: 768px) {
   .data-container {
     display: flex;
@@ -76,3 +86,5 @@ textarea::placeholder {
     margin: 20px;
   }
 }
+
+

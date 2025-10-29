@@ -20,4 +20,5 @@ button,
   align-items: center;
   justify-content: center;
   border: none;
+  gap: 24px;
 }

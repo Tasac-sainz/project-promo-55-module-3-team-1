@@ -6,7 +6,6 @@ import Buttons from "../components/Buttons";
 import defaultProject from "../images/project.jpg";
 import defaultAuthor from "../images/author.png";
 import ProjectPreview from "../components/ProjectPreview";
-import "../styles/app.css";
 import "../index.css";
 
 const HomePage = () => {
