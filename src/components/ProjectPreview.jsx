@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 
 const ProjectPreview = ({ project }) => {
   return (
-    // PREVIEW DEL PROYECTO
     <div className="project-preview__container">
       <img
         className="project-photo"

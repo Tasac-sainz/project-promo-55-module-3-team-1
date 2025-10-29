@@ -12,7 +12,6 @@ const FormTextInputs = ({ setFormData, formData, errors }) => {
 
   return (
     <>
-      {/* FORM DEL PROYECTO */}
       <div className="project__form">
         <h1>Información</h1>
         <h3>Cuéntanos sobre el proyecto</h3>
@@ -69,7 +68,6 @@ const FormTextInputs = ({ setFormData, formData, errors }) => {
         />
       </div>
 
-      {/* FORM DE LA AUTORA */}
       <div className="owner__form">
         <h3>Cuéntanos sobre la autora</h3>
 

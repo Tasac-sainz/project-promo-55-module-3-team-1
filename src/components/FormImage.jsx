@@ -24,7 +24,6 @@ const FormImage = ({ setFormData, errors }) => {
           {" "}
           Subir foto del proyecto
         </label>
-        {/* Mensaje de error debajo del input */}
         {errors.projectImage && (
           <p style={{ color: "red", marginTop: "5px" }}>
             {errors.projectImage}
@@ -43,7 +42,6 @@ const FormImage = ({ setFormData, errors }) => {
           {" "}
           Subir foto de la autora
         </label>
-        {/* Mensaje de error debajo del input */}
         {errors.authorImage && (
           <p style={{ color: "red", marginTop: "5px" }}>{errors.authorImage}</p>
         )}
